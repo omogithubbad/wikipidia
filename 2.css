@@ -1,0 +1,113 @@
+/* Global styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  flex: 1;
+  font-size: 1rem;
+}
+
+#search-form button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Search result */
+#search-result {
+  margin-top: 20px;
+}
+
+/* Light/Dark mode toggle */
+body.dark-mode {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+body.dark-mode input,
+body.dark-mode button {
+  background-color: #1e1e1e;
+  color: #f9f9f9;
+  border: 1px solid #333;
+}
+
+/* Neon Footer */
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 35px;
+  background: #111;
+  border-radius: 30px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+}
+
+/* Neon text for creator name */
+.footer .creator-name {
+  font-weight: bold;
+  font-size: 1.6rem;
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 8s ease infinite;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px currentColor,
+    0 0 40px currentColor;
+}
+
+/* Hover glow effect */
+.footer .creator-name:hover {
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px currentColor,
+    0 0 80px currentColor;
+  cursor: default;
+}
+
+/* Rainbow gradient animation */
+@keyframes rainbowText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Canvas for neon particles */
+#footer-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+}
